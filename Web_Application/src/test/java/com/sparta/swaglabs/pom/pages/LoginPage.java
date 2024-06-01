@@ -54,6 +54,11 @@ public class LoginPage extends Page {
         fillWithPassword(pass);
         submit();
     }
+
+    public ProductsPage getRedirect() {
+        return new ProductsPage(driver);
+    }
+
     public void logout() {
         openMenu();
         clickLogout();

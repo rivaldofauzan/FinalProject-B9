@@ -1,11 +1,9 @@
 package com.sparta.swaglabs.cucumber.stepdefs;
 
-import com.sparta.swaglabs.pom.pages.LoginPage;
 import com.sparta.swaglabs.pom.pages.ProductsPage;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
 import org.junit.jupiter.api.Assertions;
 
 public class HamburgerMenuSteps {
@@ -16,13 +14,9 @@ public class HamburgerMenuSteps {
         this.stepDefStateManager = stepDefStateManager;
     }
 
-    @Given("I am logged in")
-    public void theUserIsLoggedIn() {
-        productsPage = new ProductsPage(stepDefStateManager.getWebDriver());
-    }
-
     @When("I click on the burger menu")
     public void iClickOnTheBurgerMenu() {
+        productsPage = new ProductsPage(stepDefStateManager.getWebDriver());
         productsPage.goToHamburgerMenu();
     }
 
@@ -64,7 +58,6 @@ public class HamburgerMenuSteps {
 
     @Then("All items in the cart are removed")
     public void allItemsInTheCartAreRemoved() {
-        Assertions.assertEquals(true, productsPage.resetProducts());
-
+        Assertions.assertTrue(productsPage.resetProducts());
     }
 }
