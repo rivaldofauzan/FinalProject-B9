@@ -48,6 +48,10 @@ public class LoginPage extends Page {
     public void clickLogout() {
         driver.findElement(By.id("logout_sidebar_link")).click();
     }
+    
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
 
     public void login(String user, String pass) {
         fillWithUsername(user);

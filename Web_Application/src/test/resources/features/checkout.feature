@@ -6,6 +6,7 @@ Feature: Checkout
     And I fill in last name with "James"
     And I fill in Zip/Postal Code with "40121"
     And I click the Continue button
+    Then I go to the Checkout Overview page
     And I press the Cancel button
     Then I go to the cart page
 
@@ -15,6 +16,7 @@ Feature: Checkout
     And I fill in last name with "James"
     And I fill in Zip/Postal Code with "40121"
     And I click the Continue button
+    Then I go to the Checkout Overview page
     And I press the Finish button
     Then I go to the Checkout Complete page
 
@@ -24,6 +26,8 @@ Feature: Checkout
     And I fill in last name with "James"
     And I fill in Zip/Postal Code with "40121"
     And I click the Continue button
+    Then I go to the Checkout Overview page
     And I press the Finish button
+    Then I go to the Checkout Complete page
     And I press the Back Home button
     Then I go to the Product page

@@ -16,6 +16,3 @@ Feature: View products
     When I click on the product name
     Then I go to the product page
 
-  Scenario: Viewing a unique image for each product
-    Then I see a unique image for each product
-

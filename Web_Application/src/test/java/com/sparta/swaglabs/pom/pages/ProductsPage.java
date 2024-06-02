@@ -12,11 +12,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ProductsPage extends Page {
+    private By addToCartButton = By.cssSelector(".btn_inventory");
+    private List<WebElement> products;
     //Footer links
     private By twitterLink = new By.ByCssSelector(".social_twitter");
     private By facebookLink = new By.ByCssSelector(".social_facebook");
@@ -66,8 +69,8 @@ public class ProductsPage extends Page {
         driver.findElement(linkedInLink).click();
     }
 
-    public CartPage goToCart(){
-        driver.findElement(cartLink).click();
+    public CartPage goToCart() {
+        driver.findElement(By.id("shopping_cart_container")).click();
         return new CartPage(driver);
     }
 
@@ -110,6 +113,20 @@ public class ProductsPage extends Page {
         List<WebElement> webElementList = driver.findElements(cartBadge);
         return webElementList.size() == 0;
     }
+
+
+    public void addRandomProductToCart() {
+        products = driver.findElements(By.className("inventory_item"));
+        int randomIndex = new Random().nextInt(products.size());
+        products.get(randomIndex).findElement(addToCartButton).click();
+    }
+
+    public void addAllProductsToCart() {
+        for (WebElement product : products) {
+            product.findElement(addToCartButton).click();
+        }
+    }
+
 
     public ArrayList<Product> getProducts() {
         ArrayList<Product> products = new ArrayList<>();
