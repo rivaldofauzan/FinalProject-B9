@@ -39,95 +39,137 @@ public class PostUserSteps {
         this.httpRequest.header("app-id", appID);
     }
 
-    @Given("I have a user payload with title {string} and other required fields")
-    public void iHaveAUserPayloadWithTitleAndOtherRequiredFields(String title) {
-        this.title = title;
-        this.firstName = "Alex";
-        this.lastName = "Gonzales";
-        this.picture = "http://example.com/picture.jpg";
-        this.gender = "male";
-        this.email = "alex.gonzales34563@example.com";
-        this.dateOfBirth = "1990-01-01";
-        this.phone = "123456789";
-        this.street = "123 Main St";
-        this.city = "New York";
-        this.state = "NY";
-        this.country = "USA";
-        this.timezone = "+7:00";
-    }
-
-    @Given("I have a user payload with firstName {string} and other required fields")
-    public void iHaveAUserPayloadWithFirstNameAndOtherRequiredFields(String firstName) {
-        this.title = "mr";
-        this.firstName = firstName;
-        this.lastName = "Doe";
-        this.picture = "http://example.com/picture6.jpg";
-        this.gender = "male";
-        this.email = "johnathandoe66@example.com";
-        this.dateOfBirth = "1985-07-15";
-        this.phone = "777777777";
-        this.street = "303 Oak St";
-        this.city = "San Francisco";
-        this.state = "CA";
-        this.country = "USA";
-        this.timezone = "-7:00";
-    }
-
-    @Given("I have a user payload with an empty email field")
-    public void iHaveAUserPayloadWithAnEmptyEmailField() {
-        this.title = "mrs";
-        this.firstName = "Felicya";
-        this.lastName = "Vernede";
-        this.picture = "http://example.com/picture.jpg";
-        this.gender = "female";
-        this.email = "";
-        this.dateOfBirth = "1990-01-01";
-        this.phone = "123456789";
-        this.street = "123 Main St";
-        this.city = "New York";
-        this.state = "NY";
-        this.country = "USA";
-        this.timezone = "+7:00";
-    }
-
-    @Given("I have a user payload with a non-string title")
-    public void iHaveAUserPayloadWithANonStringTitle() {
-        this.title = "123";
-        this.firstName = "Emily";
-        this.lastName = "Winston";
-        this.picture = "http://example.com/picture1.jpg";
-        this.gender = "female";
-        this.email = "emily.winston333@example.com";
-        this.dateOfBirth = "1995-05-20";
-        this.phone = "(987) 654-3210";
-        this.street = "456 Oak St";
-        this.city = "Los Angeles";
-        this.state = "CA";
-        this.country = "USA";
-        this.timezone = "-8:00";
-    }
-
     @Given("I am authorized with an invalid app-id {string}")
     public void iHaveAnInvalidAppId(String appID) {
         this.httpRequest.header("app-id", appID);
     }
 
+    @Given("I am authorized with an incorrectly set app-id {string}")
+    public void iHaveAnIncorrectlySetAppId(String appID) {
+        this.httpRequest.header("app-key", appID);
+    }
+
+    @Given("I have a user payload with title {string} and other required fields")
+    public void iHaveAUserPayloadWithTitleAndOtherRequiredFields(String title) {
+        this.title = title;
+        this.firstName = "Michael";
+        this.lastName = "Johnson";
+        this.picture = "http://example.com/picture3.jpg";
+        this.gender = "male";
+        this.email = "michael.johnson456@example.com";
+        this.dateOfBirth = "1988-12-10";
+        this.phone = "987654321";
+        this.street = "456 Elm St";
+        this.city = "Chicago";
+        this.state = "IL";
+        this.country = "USA";
+        this.timezone = "-6:00";
+    }
+
+    @Given("I have a user payload with firstName {string} and other required fields")
+    public void iHaveAUserPayloadWithFirstNameAndOtherRequiredFields(String firstName) {
+        this.title = "dr";
+        this.firstName = firstName;
+        this.lastName = "Smith";
+        this.picture = "http://example.com/picture4.jpg";
+        this.gender = "female";
+        this.email = "jane.smith78@example.com";
+        this.dateOfBirth = "1992-04-25";
+        this.phone = "555555555";
+        this.street = "789 Pine St";
+        this.city = "Houston";
+        this.state = "TX";
+        this.country = "USA";
+        this.timezone = "-6:00";
+    }
+
+    @Given("I have a user payload with an empty email field")
+    public void iHaveAUserPayloadWithAnEmptyEmailField() {
+        this.title = "ms";
+        this.firstName = "Olivia";
+        this.lastName = "Brown";
+        this.picture = "http://example.com/picture5.jpg";
+        this.gender = "female";
+        this.email = "";
+        this.dateOfBirth = "1995-02-14";
+        this.phone = "123123123";
+        this.street = "101 Maple St";
+        this.city = "Phoenix";
+        this.state = "AZ";
+        this.country = "USA";
+        this.timezone = "-7:00";
+    }
+
+    @Given("I have a user payload with a non-string title")
+    public void iHaveAUserPayloadWithANonStringTitle() {
+        this.title = "321";
+        this.firstName = "Emma";
+        this.lastName = "Davis";
+        this.picture = "http://example.com/picture6.jpg";
+        this.gender = "female";
+        this.email = "emma.davis987@example.com";
+        this.dateOfBirth = "1993-08-22";
+        this.phone = "(321) 654-9870";
+        this.street = "102 Birch St";
+        this.city = "San Diego";
+        this.state = "CA";
+        this.country = "USA";
+        this.timezone = "-8:00";
+    }
+
     @Given("I have a valid user payload")
     public void iHaveAValidUserPayload() {
         this.title = "mr";
-        this.firstName = "Grace";
-        this.lastName = "Madison";
-        this.picture = "http://example.com/picture.jpg";
-        this.gender = "female";
-        this.email = "grace.madison123@example.com";
-        this.dateOfBirth = "1990-01-01";
-        this.phone = "1234567890";
-        this.street = "123 Main Street";
-        this.city = "New York";
-        this.state = "NY";
+        this.firstName = "Ethan";
+        this.lastName = "Williams";
+        this.picture = "http://example.com/picture7.jpg";
+        this.gender = "male";
+        this.email = "ethan.williams123@example.com";
+        this.dateOfBirth = "1989-11-30";
+        this.phone = "9876543210";
+        this.street = "123 Cedar St";
+        this.city = "Denver";
+        this.state = "CO";
         this.country = "USA";
-        this.timezone = "-05:00";
+        this.timezone = "-7:00";
     }
+    @Given("I have a user payload with firstName {string}, lastName {string}, and email {string}")
+    public void iHaveAUserPayloadWithFirstNameLastNameAndEmail(String firstName, String lastName, String email) {
+        this.title = "mr"; // Assuming default title
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.picture = "http://example.com/defaultPicture.jpg"; // Assuming a default picture
+        this.gender = "male"; // Assuming default gender
+        this.email = email;
+        this.dateOfBirth = "1980-01-01"; // Assuming a default date of birth
+        this.phone = "1234567890"; // Assuming a default phone number
+        this.street = "123 Main St"; // Assuming a default street address
+        this.city = "Anytown"; // Assuming a default city
+        this.state = "CA"; // Assuming a default state
+        this.country = "USA"; // Assuming a default country
+        this.timezone = "-8:00"; // Assuming a default timezone
+    }
+
+    @Then("the response body should contain user data")
+    public void theResponseBodyShouldContainUserData() {
+        String responseBody = response.getBody().asString();
+    
+        // Validate that the response contains the expected user data
+        assertThat(responseBody, containsString("\"title\":\"" + title + "\""));
+        assertThat(responseBody, containsString("\"firstName\":\"" + firstName + "\""));
+        assertThat(responseBody, containsString("\"lastName\":\"" + lastName + "\""));
+        assertThat(responseBody, containsString("\"gender\":\"" + gender + "\""));
+        assertThat(responseBody, containsString("\"email\":\"" + email + "\""));
+        assertThat(responseBody, containsString("\"dateOfBirth\":\"" + dateOfBirth + "\""));
+        assertThat(responseBody, containsString("\"phone\":\"" + phone + "\""));
+        assertThat(responseBody, containsString("\"picture\":\"" + picture + "\""));
+        assertThat(responseBody, containsString("\"street\":\"" + street + "\""));
+        assertThat(responseBody, containsString("\"city\":\"" + city + "\""));
+        assertThat(responseBody, containsString("\"state\":\"" + state + "\""));
+        assertThat(responseBody, containsString("\"country\":\"" + country + "\""));
+        assertThat(responseBody, containsString("\"timezone\":\"" + timezone + "\""));
+    }
+    
 
     @When("I send a POST request to create the user")
     public void iSendAPOSTRequestToCreateTheUser() {
@@ -163,5 +205,10 @@ public class PostUserSteps {
     @Then("I should receive a response with the status code {int}")
     public void iShouldReceiveResponseWithStatusCode(int statusCode) {
         assertThat(response.getStatusCode(), equalTo(statusCode));
+    }
+
+    @Then("the response body should contain {string}")
+    public void theResponseBodyShouldContain(String expectedMessage) {
+        assertThat(response.getBody().asString(), containsString(expectedMessage));
     }
 }
