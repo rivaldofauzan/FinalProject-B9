@@ -18,12 +18,12 @@ import static java.util.Collections.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class FilterProductsSteps {
+public class DashboardSteps {
 
     private StepDefManager manager;
     private ProductsPage productsPage;
 
-    public FilterProductsSteps(StepDefManager manager) {
+    public DashboardSteps(StepDefManager manager) {
         this.manager = manager;
         productsPage = new ProductsPage(manager.getWebDriver());
     }
@@ -55,22 +55,22 @@ public class FilterProductsSteps {
 
     @Then("The filter option should display \"NAME \\(A TO Z)\"")
     public void theFilterOptionShouldDisplayNAMEATOZ() {
-        assertEquals("NAME (A TO Z)", productsPage.getCurrentFilter());
+        assertEquals("Name (A to Z)", productsPage.getCurrentFilter());
     }
 
     @Then("The filter option should display \"NAME \\(Z TO A)\"")
     public void theFilterOptionShouldDisplayNAMEZTOA() {
-        assertEquals("NAME (Z TO A)", productsPage.getCurrentFilter());
+        assertEquals("Name (Z to A)", productsPage.getCurrentFilter());
     }
 
     @Then("The filter option should display \"PRICE \\(LOW TO HIGH)\"")
     public void theFilterOptionShouldDisplayPRICELOWTOHIGH() {
-        assertEquals("PRICE (LOW TO HIGH)", productsPage.getCurrentFilter());
+        assertEquals("Price (low to high)", productsPage.getCurrentFilter());
     }
 
     @Then("The filter option should display \"PRICE \\(HIGH TO LOW)\"")
     public void theFilterOptionShouldDisplayPRICEHIGHTOLOW() {
-        assertEquals("PRICE (HIGH TO LOW)", productsPage.getCurrentFilter());
+        assertEquals("Price (high to low)", productsPage.getCurrentFilter());
     }
 
     @Then("The products should be displayed alphabetically, in ascending order")

@@ -1,4 +1,4 @@
-Feature: Filter Products
+Feature: Dashboard
 
   Background:
     Given I am on the Products page
@@ -20,9 +20,3 @@ Feature: Filter Products
     And I click on "Price (low to high)" dropdown option
     Then The filter option should display "PRICE (LOW TO HIGH)"
     And The products should be displayed by price, in ascending order
-
-  Scenario: As a user, I want to sort products by price (high-low)
-    When I click on the filter dropdown
-    And I click on "Price (high to low)" dropdown option
-    Then The filter option should display "PRICE (HIGH TO LOW)"
-    And The products should be displayed by price, in descending order

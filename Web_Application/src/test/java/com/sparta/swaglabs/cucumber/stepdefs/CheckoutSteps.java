@@ -61,19 +61,19 @@ public class CheckoutSteps {
         assertEquals("https://www.saucedemo.com/checkout-step-two.html", manager.getPageURL());
     }
 
-    @When("I fill in first name")
-    public void iFillInFirstName() {
-        checkoutInformationPage.fillFirstName("John");
+    @When("I fill in first name with {string}")
+    public void iFillInFirstNameWith(String firstName) {
+        checkoutInformationPage.fillFirstName(firstName);
     }
 
-    @When("I fill in last name")
-    public void iFillInLastName() {
-        checkoutInformationPage.fillLastName("John");
+    @When("I fill in last name with {string}")
+    public void iFillInLastNameWith(String lastName) {
+        checkoutInformationPage.fillLastName(lastName);
     }
 
-    @And("I fill in postcode")
-    public void iFillInPostcode() {
-        checkoutInformationPage.fillPostCode("555 555");
+    @When("I fill in Zip\\/Postal Code with {string}")
+    public void iFillInZipPostalCodeWith(String zipCode) {
+        checkoutInformationPage.fillPostCode(zipCode);
     }
 
     @Then("I see a \"First Name is required\" error message")

@@ -22,18 +22,18 @@ public class ProductsPage extends Page {
     private By facebookLink = new By.ByCssSelector(".social_facebook");
     private By linkedInLink = new By.ByCssSelector(".social_linkedin");
 
-    //Hamburger Menu
-    private By hamburgerMenu = new By.ByCssSelector("#react-burger-menu-btn");
+    //Menu
+    private By Menu = new By.ByCssSelector("#react-burger-menu-btn");
 
     //Cart
     private By cartLink = new By.ByCssSelector(".shopping_cart_link");
     private By cartBadge = new By.ByCssSelector(".shopping_cart_badge");
 
-    //Hamburger Menu Links
-    private By aboutInHamburgerMenu = new By.ByCssSelector("#about_sidebar_link");
-    private By resetAppStateInHamburgerMenu = new By.ByCssSelector("#reset_sidebar_link");
-    private By logOutInHamburgerMenu = new By.ByCssSelector("#logout_sidebar_link");
-    private By allItemsLinkInHamburgerMenu = new By.ByCssSelector("#inventory_sidebar_link");
+    //Menu Links
+    private By aboutMenu = new By.ByCssSelector("#about_sidebar_link");
+    private By resetAppStateMenu = new By.ByCssSelector("#reset_sidebar_link");
+    private By logOutMenu = new By.ByCssSelector("#logout_sidebar_link");
+    private By allItemsLinkMenu = new By.ByCssSelector("#inventory_sidebar_link");
 
     //Products
     private By addTShirtToCart = new By.ByCssSelector("*[data-test=\"add-to-cart-sauce-labs-bolt-t-shirt\"]");
@@ -74,31 +74,31 @@ public class ProductsPage extends Page {
     public void addBagToCart(){
         driver.findElement(addBagToCartLink).click();
     }
-    public void goToHamburgerMenu() {
-        driver.findElement(hamburgerMenu).click();
+    public void goToMenu() {
+        driver.findElement(Menu).click();
     }
 
-    public void goToAllItemsFromHamburgerMenu() {
+    public void goToAllItemsMenu() {
         WebDriverWait webDriverWait = new WebDriverWait(driver, 20);
-        WebElement element = webDriverWait.until(ExpectedConditions.elementToBeClickable(allItemsLinkInHamburgerMenu));
+        WebElement element = webDriverWait.until(ExpectedConditions.elementToBeClickable(allItemsLinkMenu));
         element.click();
     }
 
-    public void goToAboutFromHamburgerMenu() {
+    public void goToAboutMenu() {
         WebDriverWait webDriverWait = new WebDriverWait(driver, 20);
-        WebElement element = webDriverWait.until(ExpectedConditions.elementToBeClickable(aboutInHamburgerMenu));
+        WebElement element = webDriverWait.until(ExpectedConditions.elementToBeClickable(aboutMenu));
         element.click();
     }
 
-    public void goToLogOutFromHamburgerMenu() {
+    public void goToLogOutMenu() {
         WebDriverWait webDriverWait = new WebDriverWait(driver, 20);
-        WebElement element = webDriverWait.until(ExpectedConditions.elementToBeClickable(logOutInHamburgerMenu));
+        WebElement element = webDriverWait.until(ExpectedConditions.elementToBeClickable(logOutMenu));
         element.click();
     }
 
-    public void goToResetAppStateFromHamburgerMenu() {
+    public void goToResetAppStateMenu() {
         WebDriverWait webDriverWait = new WebDriverWait(driver, 20);
-        WebElement element = webDriverWait.until(ExpectedConditions.elementToBeClickable(resetAppStateInHamburgerMenu));
+        WebElement element = webDriverWait.until(ExpectedConditions.elementToBeClickable(resetAppStateMenu));
         element.click();
     }
 
