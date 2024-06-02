@@ -1,4 +1,4 @@
-Feature: Checkout
+Feature: Cart
 
   Scenario: Checkout berisi 1 barang
     Given I am on the Dashboard page

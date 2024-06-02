@@ -1,4 +1,4 @@
-Feature: View products
+Feature: Detail products
 
   Background:
     Given I am on the Products page
